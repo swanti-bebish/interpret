@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // interpretBtn.addEventListener("click", setAnimation)
   interpretBtn.addEventListener("click", interpret)
 
-  let array = [
+  let character = [
     ["01000001", "A"],
     ["01000010", "B"],
     ["01000011", "C"],
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let inputedValueArray = inputedContent.value.split(" ")
     if (inputedValueArray.length > i) {
       interpretBtn.setAttribute("disabled", true)
-      let arr = array.map(function(element){
+      let arr = character.map(function(element){
         if (inputedValueArray[i] == element[0]) {
           return element[1]
         } else {
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let inputedValueArray = inputedContent.value.split("")
     if (inputedValueArray.length > i) {
       interpretBtn.setAttribute("disabled", true)
-      let arr = array.map(function(element){
+      let arr = character.map(function(element){
         if (inputedValueArray[i] == element[1]) {
           return element[0]
         } else {
