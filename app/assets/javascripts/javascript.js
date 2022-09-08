@@ -203,6 +203,14 @@ document.addEventListener("DOMContentLoaded", function() {
   // }
 
   function containsAnyLetter(str) {
-    return /[a-zA-Z]/.test(str);
+    let alphabet = /[a-zA-Z]/, 
+    specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/
+    if (str == " ") {
+      return true
+    } else if (alphabet.test(str) || specialChars.test(str)) {
+      return true
+    } else {
+      return false
+    }
   }
 })
