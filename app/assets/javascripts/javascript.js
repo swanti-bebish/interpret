@@ -144,6 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
         toAlphabet()
       }, delay.value)
     } else {
+      inputedContent.value = ""
       interpretBtn.removeAttribute("disabled", true)
     }
   }
@@ -172,6 +173,7 @@ document.addEventListener("DOMContentLoaded", function() {
         toBinary()
       }, delay.value)
     } else {
+      inputedContent.value = ""
       interpretBtn.removeAttribute("disabled", true)
     }
   }
