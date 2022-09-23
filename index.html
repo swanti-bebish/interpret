@@ -9,6 +9,9 @@
     <title>Interpret</title>
   </head>
   <body>
+    <div class="header">
+      <span>Interpret</span>
+    </div>
     <div class="main-container">
       <div class="drop-down-button-wrapper">
         <span class="code-type">Binary</span> 
@@ -18,10 +21,15 @@
         <span id="resultContentWrapper"></span>
       </div>
       <div class="input-container">
-        <textarea id="inputedValue" placeholder="Type binary or string..."></textarea>
+        <div class="text-area-wrapper">
+          <textarea id="inputedValue" placeholder="Type binary or string..."></textarea>
+        </div>
         <input type="hidden" id="delay">
         <button id="interpretBtn" class="translate-button">Translate</button>
       </div>
+    </div>
+    <div class="footer">
+      <span>&copy; All Rights Reserved 2022</span>
     </div>
   </body>
 </html>
