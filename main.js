@@ -2,11 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
   let interpretBtn =  document.getElementById("interpretBtn"),
   resultContentWrapper = document.getElementById("resultContentWrapper"),
   delay = document.getElementById("delay"),
-  inputedContent = document.getElementById("inputedValue")
+  inputedContent = document.getElementById("inputedValue"),
+  copyBtn = document.getElementById("copyIcon"),
+  copiedWrapper = document.getElementById("copiedSpan"),
+  inputedContentInTextField = document.getElementById("inputedContentInTextField"),
   i = 0
 
   // interpretBtn.addEventListener("click", setAnimation)
   interpretBtn.addEventListener("click", interpret)
+  copyBtn.addEventListener("click", copy)
 
   let character = [
     ["01000001", "A"],
@@ -214,5 +218,20 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       return false
     }
+  }
+
+  function copy() {
+    console.log(copiedWrapper.textContent != "")
+    if (copiedWrapper.textContent == "") {
+      copiedWrapper.insertAdjacentHTML("beforeend", "COPIED")
+      setTimeout(function () {
+        copiedWrapper.textContent = ""
+      }, 3000)
+    }
+    inputedContentInTextField.value = resultContentWrapper.textContent
+    inputedContentInTextField.classList.remove("d-none")
+    inputedContentInTextField.select();
+    document.execCommand('copy')
+    inputedContentInTextField.classList.add("d-none")
   }
 })
