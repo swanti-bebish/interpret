@@ -1,7 +1,6 @@
 body {
   background-image: url("background.jpg");
   background-repeat: no-repeat;
-  /* background-size: cover; */
   font-family: monospace;
   padding: 20px;
 }
@@ -110,18 +109,16 @@ textarea:hover {
   color: #ffff;
 }
 
-.footer {
-  left: 0;
-  right: 0;
-  padding-bottom: 20px;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  color: #f1f1f1;
-}
-
 .header {
   text-align: center;
   color: #f1f1f1;
   font-size: 30px;
+}
+
+.footer {
+  margin-top: 100px;
+  padding-bottom: 10px;
+  float: bottom;
+  text-align: center;
+  color: #f1f1f1;
 }
